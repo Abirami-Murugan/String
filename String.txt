@@ -1,0 +1,721 @@
+1)
+package learning2;
+
+public class stringLearningsDemo {
+
+	public static void main(String[] args) {
+		
+		String s = new String("abc");
+		System.out.println(s);
+		
+		String s2 = "abc";
+		System.out.println(s2);
+
+	}
+
+}
+
+Output:
+abc
+abc
+
+2)
+package learning2;
+
+public class stringLearningsDemo{
+	
+	public static void main(String[] atgs) {
+		
+		String s = "abc";
+		System.out.println(s);
+		
+		s = "pqr";
+		System.out.println(s);
+	}
+}
+
+Output:
+abc 
+pqr
+
+ 3)Different Object has different memory spaces.
+Proof: Print the object hashcode
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+	public static void main(String[] atgs) {
+		
+		String s = "abc";
+		System.out.println(s);
+		System.out.println(s.hashCode());
+		
+		
+		s = "pqr";
+		System.out.println(s);
+		System.out.println(s.hashCode());
+	}
+}
+
+Output:
+abc
+96354//hashcode for abc
+pqr
+111249//hashcode for pqr
+
+
+4)
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+	public static void main(String[] atgs) {
+		
+		String s1 = "TamilNadu";
+		String s2 = "TamilNadu";
+		String s3 = "TamilNadu";
+		String s4 = "TamilNadu";
+		String s5 = "TamilNadu";
+		
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		System.out.println(s4);
+		System.out.println(s5);
+		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
+		System.out.println(s3.hashCode());
+		System.out.println(s4.hashCode());
+		System.out.println(s5.hashCode());
+		
+		
+	}
+}
+
+Output:
+TamilNadu
+TamilNadu
+TamilNadu
+TamilNadu
+TamilNadu
+1108433095
+1108433095
+1108433095
+1108433095
+1108433095
+
+5)
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+	public static void main(String[] atgs) {
+		
+		String s1 = "TamilNadu";
+		String s2 = "TamilNadu";
+		String s3 = "TamilNadu";
+		String s4 = "TamilNadu";
+		String s5 = "TamilNadu";
+		s1 = "kerala";
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		System.out.println(s4);
+		System.out.println(s5);
+		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
+		System.out.println(s3.hashCode());
+		System.out.println(s4.hashCode());
+		System.out.println(s5.hashCode());
+		
+		
+	}
+}
+
+Output:
+kerala
+TamilNadu
+TamilNadu
+TamilNadu
+TamilNadu
+-1134879682
+1108433095
+1108433095
+1108433095
+1108433095
+
+
+
+toString() -Method overrided in our String class.
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+	public stringLearningsDemo(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] atgs) {
+		
+		
+		stringLearningsDemo sld = new stringLearningsDemo("Hi");
+		System.out.println(sld);
+		
+		String s = new String("Gobi");
+		System.out.println(s);
+	}
+}
+
+Output:
+learning2.stringLearningsDemo@442d9b6e
+Gobi
+
+
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+	String name;
+	int id;
+	
+	public stringLearningsDemo(String name,int i) {
+		
+	 this.name=name;
+	 this.id=i;
+		
+	}
+
+		public String toString()
+	{
+		return this.name ;
+	}
+	public static void main(String[] atgs) {
+		
+		
+		stringLearningsDemo sld = new stringLearningsDemo("Hi",103);
+		System.out.println(sld);
+		
+		String s = new String("Gobi");
+		System.out.println(s);
+	}
+}
+
+Output:
+Hi
+Gobi
+
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+	String name;
+	int id;
+	
+	public stringLearningsDemo(String name,int i) {
+		
+	 this.name=name;
+	 this.id=i;
+		
+	}
+
+		public String toString()
+	{
+		return ""+this.id ;
+	}
+	public static void main(String[] atgs) {
+		
+		
+		stringLearningsDemo sld = new stringLearningsDemo("Hi",103);
+		System.out.println(sld);
+		
+		String s = new String("Gobi");
+		System.out.println(s);
+	}
+}
+
+Output:
+103
+Gobi
+
+
+Methods in Java:
+package learning2;
+
+public class stringLearningsDemo{
+	
+		public static void main(String[] atgs) {
+		
+		
+		
+		
+		String s = new String("Gobi");
+		System.out.println(s.charAt(0));
+		System.out.println(s.charAt(1));
+		System.out.println(s.charAt(2));
+		System.out.println(s.charAt(3));
+	}
+}
+
+Output:
+G
+o
+b
+i
+
+
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+		public static void main(String[] atgs) {
+		
+		
+		String s = new String("Abirami");
+		System.out.println(s.length());
+		int i=0;
+		while(i<s.length())
+		{
+		System.out.println(s.charAt(i));
+		i++;
+		}
+		
+	}
+}
+
+Output:
+7
+A
+b
+i
+r
+a
+m
+i
+
+
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+		public static void main(String[] atgs) {
+		
+		
+		String s = new String("abirami murugan");
+		System.out.println(s.length());
+		int i=0;
+		while(i<s.length())
+		{
+			 char ch = s.charAt(i);
+			if(ch=='a')
+			 System.out.println(ch);
+		       i++;
+		}
+		
+	}
+}
+
+Output:
+15
+a
+a
+a
+
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+		public static void main(String[] atgs) {
+		
+		
+		String s = new String("abirami murugan");
+		//System.out.println(s.length());
+		int i=0;
+		int count =0;
+		while(i<s.length())
+		{
+			 char ch = s.charAt(i);
+			if(ch=='a')
+				count++;
+			 //System.out.println(ch);
+			
+		       i++;
+		}
+		System.out.println("No of a's "+ count);
+		
+	}
+}
+
+
+Output:
+No of a's 3
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+		public static void main(String[] atgs) {
+		
+		
+		String s = new String("Abirami murugan");
+		//System.out.println(s.length());
+		int i=0;
+		int count =0;
+		while(i<s.length())
+		{
+			 char ch = s.charAt(i);
+			if(ch=='a' || ch =='A')
+				count++;
+			 //System.out.println(ch);
+			
+		       i++;
+		}
+		System.out.println("No of a's "+ count);
+		
+	}
+}
+
+Output:
+No of a's 3
+
+Find the vowels count in a given String.
+package learning2;
+
+public class stringLearningsDemo{
+	
+		public static void main(String[] atgs) {
+		
+		
+		String s = new String("abirami murugan");
+		//System.out.println(s.length());
+		int i=0;
+		int count =0;
+		while(i<s.length())
+		{
+			 char ch = s.charAt(i);
+			if(ch=='a' || ch =='e' || ch =='i' || ch=='o'||ch=='u')
+				count++;
+			 //System.out.println(ch);
+			
+		       i++;
+		}
+		System.out.println("Vowels count in a given String " + count);
+		
+	}
+}
+
+Output:
+Vowels count in a given String 7
+
+Print the vowel count using switch case statement.
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+		public static void main(String[] atgs) {
+		
+		
+		String s = new String("abirami murugan");
+		//System.out.println(s.length());
+		int i=0;
+		int count =0;
+		while(i<s.length())
+		{
+			 char ch = s.charAt(i);
+			 
+			 switch(ch) {
+				 case 'a':
+			     count++;
+			     break;
+				 case 'e':
+					 count++;
+					 break;
+				 case 'i':
+					 count++;
+					break;
+				 case 'o':
+						 count++;
+						 break;
+				 case 'u':
+					 count++;
+					 break; 
+			 
+			
+				/*
+				 * if(ch=='a' || ch =='e' || ch =='i' || ch=='o'||ch=='u') count++;
+				 * //System.out.println(ch);
+				 */
+		       
+		}
+			 i++;
+		
+	}
+		System.out.println("Vowels count in a given String " + count);
+}
+}
+
+
+	private void countOfWords() {
+			
+			String s = "gobi";
+			String s2 = "gobi krishnan";
+			int i =0;
+			int count = 1;
+			while(i<s2.length())
+			{
+				char ch = s2.charAt(i);
+				if(ch == ' ')
+					count++;
+				i++;
+			}
+			System.out.println("No of words " + count);
+		}
+
+
+
+Output:
+No of words 2
+
+
+
+private void countOfSentences() {
+			
+		 String s = "gobi";
+		 String s2 = " Myname is Abirami.I love coding. I practice everyday.";
+		 
+		 int i = 0;
+		 int count =0;
+		 while(i<s2.length())
+		 {
+			 char ch = s2.charAt(i);
+			 if(ch == '.')
+				 count++;
+			 i++;
+		 }
+			System.out.println("No of sentences = " +count);
+		}
+
+Output:
+No of sentences = 3
+
+
+
+private void countOfSentences2() {
+			
+			
+			String s = "gobi";
+			//System.out.println(s.contains("O"));
+			//System.out.println(s.endsWith("bi"));
+			//System.out.println(s.startsWith("go"));
+			String s2 = "My name is Abirami. My mail id is mabirami882@gmail.com. ";
+			int i = 0;
+			int count =0;
+			while(i<s2.length())
+			{
+				
+				if(s2.charAt(i) == '.' )
+					if(s2.charAt(i+1)==' ')
+						count++;
+				i++;
+			}
+			System.out.println("No of sentences = " + count);
+		}
+Output:
+No of sentences = 2
+
+
+private void countOfSentences2() {
+			
+			
+			String s = " gobi ";
+			System.out.println(s);
+			System.out.println(s.length());
+			//System.out.println(s.contains("O"));
+			//System.out.println(s.endsWith("bi"));
+			//System.out.println(s.startsWith("go"));
+			String s3 = s.trim();
+			System.out.println(s3);
+			System.out.println(s3.length());
+			String s2 = "My name is Abirami. My mail id is mabirami882@gmail.com. ";
+			int i = 0;
+			int count =0;
+			while(i<s2.length())
+			{
+				
+				if(s2.charAt(i) == '.' )
+					if(s2.charAt(i+1)==' ')
+						count++;
+				i++;
+			}
+			System.out.println("No of sentences = " + count);
+		}
+
+Output:
+ gobi 
+6
+gobi
+4
+No of sentences = 2
+
+1)charAt(i)
+2)length()
+3)concat()//It is used to join two strings. like addition operation.
+4)contains()//It returns the boolean value. True or false. 
+5)tolower()
+6)toupper()
+7)endswith()
+8)startwith()
+9)contentequals()
+10)index()
+11)lastindex()
+
+
+package learning2;
+
+public class stringLearningsDemo{
+	
+		public static void main(String[] args) 
+		
+		{
+			
+			stringLearningsDemo sld = new stringLearningsDemo();
+			//sld.countOfVowels();
+			//sld.countOfWords();
+			//sld.countOfSentences();
+			//sld.countOfSentences2();
+			sld.mypractice();
+		}
+		
+		
+		
+		private void mypractice() {
+			// TODO Auto-generated method stub
+			
+			String s = "Abirami";
+			System.out.println(s.substring(3));
+			
+		}
+
+
+
+		private void countOfSentences2() {
+			
+			
+			String s = " gobi ";
+			System.out.println(s);
+			System.out.println(s.length());
+			//System.out.println(s.contains("O"));
+			//System.out.println(s.endsWith("bi"));
+			//System.out.println(s.startsWith("go"));
+			String s3 = s.trim();
+			System.out.println(s3);
+			System.out.println(s3.length());
+			String s2 = "My name is Abirami. My mail id is mabirami882@gmail.com. ";
+			int i = 0;
+			int count =0;
+			while(i<s2.length())
+			{
+				
+				if(s2.charAt(i) == '.' )
+					if(s2.charAt(i+1)==' ')
+						count++;
+				i++;
+			}
+			System.out.println("No of sentences = " + count);
+		}
+
+
+
+		private void countOfSentences() {
+			
+		 String s = "gobi";
+		 String s2 = " Myname is Abirami.I love coding. I practice everyday.";
+		 
+		 int i = 0;
+		 int count =0;
+		 while(i<s2.length())
+		 {
+			  
+			 if(s2.charAt(i)== '.')
+				 count++;
+			 i++;
+		 }
+			System.out.println("No of sentences = " +count);
+		}
+
+
+
+		private void countOfWords() {
+			
+			String s = "gobi";
+			String s2 = "gobi krishnan";
+			int i =0;
+			int count = 1;
+			while(i<s2.length())
+			{
+				
+				if(s2.charAt(i) == ' ')
+					count++;
+				i++;
+			}
+			System.out.println("No of words " + count);
+		}
+
+
+
+		private void countOfVowels() {
+			
+			
+		String s = new String("abirami murugan");
+		
+		//System.out.println(s.length());
+		
+		int i=0;
+		int count =0;
+		while(i<s.length())
+		{
+			 char ch = s.charAt(i);
+			 
+			 switch(ch) {
+				 case 'a':
+			     count++;
+			     break;
+				 case 'e':
+					 count++;
+					 break;
+				 case 'i':
+					 count++;
+					break;
+				 case 'o':
+						 count++;
+						 break;
+				 case 'u':
+					 count++;
+					 break; 
+			 
+			
+				/*
+				 * if(ch=='a' || ch =='e' || ch =='i' || ch=='o'||ch=='u') count++;
+				 * //System.out.println(ch);
+				 */
+		       
+		}
+			 i++;
+		
+	}
+		System.out.println("Vowels count in a given String " + count);
+}
+}
+
+
+
+
